@@ -1,3 +1,10 @@
+/**
+ * Month formater (number to string).
+ * @function formatMonth
+ * @param {Number} monthIndex A number between 0 and 11 corresponding to a month.
+ * 
+ * @returns The corresponding month written in a string.
+ */
 export const formatMonth = (monthIndex) => {
   switch (monthIndex) {
     case 0:

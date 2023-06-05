@@ -10,6 +10,7 @@ const Transactions = () => {
   /* Get the auth key in the store */
   const auth = useSelector(selectAuth);
 
+  /* Redux dispatcher */
   const dispatch = useDispatch();
 
   /* Dispatch fetch action to get profile data */
@@ -18,7 +19,10 @@ const Transactions = () => {
     dispatch(fetchOrUpdateTransactionsList(auth.data?.body.token));
   }, [auth, dispatch]);
 
+  /* Get the profile data using redux selector */
   const profileData = useSelector(selectProfile).data?.body ?? {};
+
+  /* Get the transactions data using redux selector */
   const transactionsData = useSelector(selectTransactions).data?.body ?? [];
 
   const { balance } = profileData;

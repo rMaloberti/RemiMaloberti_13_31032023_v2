@@ -4,7 +4,7 @@ import profileReducer from '../features/profile';
 import transactionsReducer from '../features/transactions';
 import transactionDetailsReducer from '../features/transactionDetails';
 
-/* Create the global redux store */
+/* Configure the global redux store */
 export default configureStore({
   reducer: {
     auth: authReducer,
