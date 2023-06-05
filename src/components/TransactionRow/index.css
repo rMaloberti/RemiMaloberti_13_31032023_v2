@@ -1,0 +1,32 @@
+.transactions__table__row {
+  background-color: #fff;
+  border-bottom: 0.2rem solid #12002b;
+  transform: scaleX(1);
+  transform-origin: center;
+  transition: transform 0.3s ease-out;
+}
+
+.transactions__table__row:hover {
+  transform: scaleX(1.05);
+}
+
+.transactions__table__row:hover .transactions__table__row__cell__icon {
+  transform: scale(1.25);
+}
+
+.transactions__table__row__cell {
+  padding: 0.75rem 0;
+  color: #12002b;
+}
+
+.transactions__table__row__cell__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  transition: transform 0.3s ease-out;
+}
+
+.transactions__table__row__cell__icon__img {
+  width: 2rem;
+}

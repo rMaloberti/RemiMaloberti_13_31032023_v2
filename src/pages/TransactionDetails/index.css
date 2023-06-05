@@ -1,0 +1,100 @@
+.details {
+  width: 75%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+
+  margin: 2.5rem auto 0 auto;
+  padding: 1rem 2.5rem;
+  background-color: #fff;
+  color: #12002b;
+}
+
+.details p {
+  margin: 0;
+}
+
+.details__infos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.details__infos__top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.details__infos__top__amount {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.details__infos__top__description {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.details__infos__bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.details__infos__bottom__date,
+.details__infos__bottom__transaction-type {
+  max-width: 50%;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.details__infos__bottom__date__date,
+.details__infos__bottom__transaction-type__type {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.details__edit__form__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.details__edit__form__input-wrapper label {
+  font-weight: bold;
+}
+
+.details__edit__form__input-wrapper input {
+  margin: 0 auto;
+  width: 10rem;
+  padding: 0.25rem;
+  font-size: 1rem;
+}
+
+.details__edit__form__input-wrapper textarea {
+  padding: 0.25rem;
+  font-size: 1rem;
+}
+
+.details__edit__form__submit {
+  display: block;
+  width: 7.5rem;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 1rem auto 0 auto;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+}

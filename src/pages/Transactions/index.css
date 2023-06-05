@@ -1,0 +1,34 @@
+.account-banner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  background-color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: column;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.transactions {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  padding-top: 5rem;
+}
+
+.transactions__table {
+  width: 90%;
+  border-collapse: collapse;
+  font-weight: bold;
+}
+
+.transactions__table__header {
+  color: #fff;
+  font-size: .85rem;
+}
