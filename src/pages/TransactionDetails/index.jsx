@@ -14,10 +14,13 @@ const TransactionDetails = () => {
   /* Get the auth key in the store */
   const auth = useSelector(selectAuth);
 
+  /* Get the transaction ID in the URL params */
   const transactionId = useParams('id').id;
 
+  /* React state to hold the formated version of the date */
   const [formatedDate, setFormatedDate] = useState(null);
 
+  /* Redux dispatcher */
   const dispatch = useDispatch();
 
   /* Dispatch fetch action to get profile data */
@@ -26,11 +29,15 @@ const TransactionDetails = () => {
     dispatch(fetchOrUpdateTransactionDetails(auth.data?.body.token, transactionId));
   }, [auth, transactionId, dispatch]);
 
+  /* Get the profile data using redux selector */
   const profileData = useSelector(selectProfile).data?.body ?? {};
+
+  /* Get the transaction data using redux selector */
   const transactionData = useSelector(selectTransactionDetails).data?.body ?? {};
 
   const { balance } = profileData;
 
+  /* Format the date as soon as we get it */
   useEffect(() => {
     const dateToFormat = new Date(transactionData.date);
 
@@ -41,17 +48,21 @@ const TransactionDetails = () => {
     );
   }, [transactionData.date]);
 
+  /* Text inputs refs */
   const categoryField = useRef(null);
   const notesField = useRef(null);
 
+  /* Text inputs react states that holds their value */
   const [categoryValue, setCategoryValue] = useState('');
   const [notesValue, setNotesValue] = useState('');
 
+  /* Fill the text inputs with the values saved in redux store */
   useEffect(() => {
     setCategoryValue(transactionData.category);
     setNotesValue(transactionData.notes);
   }, [transactionData.category, transactionData.notes]);
 
+  /* Input error controller using boolean in react state */
   const [emptyCategoryError, setEmptyCategoryError] = useState(false);
 
   /**
