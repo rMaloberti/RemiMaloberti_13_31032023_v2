@@ -9,15 +9,21 @@ const Profile = () => {
   /* Get the auth key in the store */
   const auth = useSelector(selectAuth);
 
+  /* React router navigate */
   const navigate = useNavigate();
+
+  /* Redux dispatcher */
   const dispatch = useDispatch();
 
+  /* Text inputs refs */
   const firstNameField = useRef(null);
   const lastNameField = useRef(null);
 
+  /* Text inputs react states that holds their value */
   const [firstNameValue, setFirstNameValue] = useState('');
   const [lastNameValue, setLastNameValue] = useState('');
 
+  /* Observer that tells if the edition is active using a boolean in react state */
   const [editingName, setEditingName] = useState(false);
 
   /**
@@ -41,6 +47,7 @@ const Profile = () => {
     dispatch(fetchOrUpdateProfile(auth.data?.body.token));
   }, [auth, dispatch]);
 
+  /* Get the profile data using redux selector */
   const profileData = useSelector(selectProfile).data?.body ?? {};
 
   const { firstName, lastName, balance } = profileData;
