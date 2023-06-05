@@ -9,14 +9,18 @@ const Login = () => {
   /* Get the auth key in the store */
   const auth = useSelector(selectAuth);
 
+  /* Redux dispatcher */
   const dispatch = useDispatch();
 
+  /* Text inputs refs */
   const usernameField = useRef(null);
   const passwordField = useRef(null);
 
+  /* Text inputs react states that holds their value */
   const [usernameValue, setUsernameValue] = useState('');
   const [passwordValue, setPasswordValue] = useState('');
 
+  /* Inputs error controller using boolean in react states */
   const [emptyUsernameError, setEmptyUsernameError] = useState(false);
   const [emptyPasswordError, setEmptyPasswordError] = useState(false);
 
