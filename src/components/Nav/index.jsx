@@ -9,6 +9,7 @@ const Nav = () => {
   /* Get the auth key in the store */
   const auth = useSelector(selectAuth);
 
+  /* Redux dispatcher */
   const dispatch = useDispatch();
 
   return (
