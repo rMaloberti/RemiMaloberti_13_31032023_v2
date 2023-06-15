@@ -31,14 +31,13 @@ const Profile = () => {
    * @function submitForm
    */
   const submitForm = () => {
-    if (firstNameValue !== '' && lastNameValue !== '') {
       const newData = {
-        firstName: firstNameValue,
-        lastName: lastNameValue,
+        firstName: firstNameValue !== '' ? firstNameValue : firstName,
+        lastName: lastNameValue !== '' ? lastNameValue : lastName,
       };
 
       dispatch(editProfile(auth.data?.body.token, newData));
-    }
+    
     setEditingName(false);
   };
 
